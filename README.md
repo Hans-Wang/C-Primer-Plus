@@ -1,2 +1,2 @@
 # C-Primer-Plus
-C Primer Plus 笔记
+主要是学习C Primer Plus时的笔记
