@@ -1,0 +1,178 @@
+### 编程练习
+
+1. 按格式打印名字
+
+   ```c
+   #include <stdio.h>
+   
+   int main(void){
+       printf("Hans Wang\n");
+       printf("Hans\nWang\n");
+       printf("Hans");
+       printf(" Wang\n");
+   }
+   
+   #gcc -o name name.c
+   #./name
+   Hans Wang
+   Hans
+   Wang
+   Hans Wang
+   ```
+
+2. 打印姓名和地址
+
+   ```C
+   #include <stdio.h>
+   int main(void){
+       printf("name: Hans Wang\n");
+       printf("address: ShanDong HeZe\n");
+       
+       return 0;
+   }
+   ```
+
+3. 把年龄转换成天数，并显示这两个值，不考虑闰年
+
+   ```C
+   #include <stdio.h>
+   
+   int main(void){
+       int age;
+       int day = 365;
+       int days;
+   
+       printf("Please input your age:");
+       scanf("%d", &age);
+   
+       days = age * day;
+   
+       printf("Your age is %d,equel %d days.\n",age,days);
+   
+       return 0;
+   }
+   ```
+
+   
+
+4. 生成指定输出，除main()函数外还要调用两个自定义函数
+
+   ```C
+   #include <stdio.h>
+   void jolly(void);
+   void deny(void);
+   
+   int main(void){
+      jolly(); 
+      jolly(); 
+      jolly(); 
+      deny();
+       return 0;
+   }
+   
+   void jolly(void){
+       printf("For he's a jolly good fellow!\n");
+   }
+   void deny(void){
+       printf("Which nobody can deny!\n");
+   }
+   ```
+
+5. 生成指定输出
+
+   ```C
+   #include <stdio.h>
+   void br(void);
+   void ic(void);
+   
+   int main(void){
+       br();
+       ic();
+       printf("India,China,\n");
+       printf("Brazil,Russia\n");
+   }
+   
+   
+   void br(void){
+       printf("Brazil,Russia,");
+   }
+   void ic(void){
+       printf("India,China\n");
+   }
+   ```
+
+6. 编写程序创建整型变量，计算变量的两位和平方。
+
+   ```C
+   #include <stdio.h>
+   
+   int main(void){
+   
+       int toes;
+       toes = 10;
+       
+       int toes2;
+       int toes_double;
+       toes2 = 2 * toes;
+       toes_double = toes * toes;
+       
+       printf("toes = %d\ntoes2 = %d\ntoes_double = %d\n", toes, toes2, toes_double);
+   
+       return 0;
+   }
+   ```
+
+7. 生成指定输出simle。
+
+   ```C
+   #include <stdio.h>
+   
+   void smile(void){
+       printf("Smile!");
+   }
+   
+   int main(){
+       smile();
+       smile();
+       smile();
+       printf("\n");
+       smile();
+       smile();
+       printf("\n");
+       smile();
+       printf("\n");
+   
+       return 0;
+   }
+   ```
+
+8. 写一个程序，在函数中调用另一个函数
+
+   ```C
+   #include <stdio.h>
+   
+   void one_three(void);
+   void two(void);
+   
+   int main(){
+       printf("starting now:\n");
+       one_three();
+       printf("done!\n");
+       return 0;
+   }
+   
+   void one_three(void){
+       printf("one\n");
+       two();
+       printf("three\n");
+   }
+   
+   void two(void){
+       printf("two\n");
+   
+   }
+   ```
+
+   
+
+   
